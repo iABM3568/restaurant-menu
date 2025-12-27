@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo-section">
+          <div class="logo">🍔</div>
+          <div class="restaurant-name">Restaurant Menu</div>
+          <div class="tagline">Slogan</div>
+        </div>
+
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>1. Home</li>
+            <li>2. Your Orders</li>
+            <li>3. Wallet</li>
+            <li>4. Profile</li>
+            <li>5. Logout</li>
+          </ul>
+        </div>
+
+        <div class="more-about">
+          <h3>More About Us</h3>
+          <ul>
+            <li>1. Our blog</li>
+            <li>2. Upcoming Dishes</li>
+            <li>3. Our Story</li>
+            <li>4. Social Media Links</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <div class="search-bar">
+            <input
+              type="text"
+              placeholder="Search Food Item"
+              id="searchInput" />
+          </div>
+          <div class="auth-buttons">
+            <button class="btn btn-signup">Signup</button>
+            <button class="btn btn-login">Login</button>
+            <div class="cart-icon">
+              🛒
+              <span class="cart-count" id="cartCount">0</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Menu Display Screen -->
+        <div id="menuScreen">
+          <!-- Banner -->
+          <section class="banner">
+            <h1>WEEKEND SPECIAL</h1>
+            <h2>Delicious</h2>
+            <h2>FOOD MENU</h2>
+            <div class="discount-badge">
+              <span class="save">SAVE UP TO</span>
+              <span class="percent">50%</span>
+            </div>
+          </section>
+
+          <!-- Menu Section -->
+          <section>
+            <h2 class="menu-header">Menu</h2>
+            <div class="menu-grid" id="menuGrid">
+              <div class="loading">Loading menu...</div>
+            </div>
+          </section>
+
+          <button class="order-button" id="orderButton" disabled>
+            Take Order
+          </button>
+        </div>
+
+        <!-- Order Processing Screen -->
+        <div class="order-screen" id="orderScreen">
+          <div class="order-status" id="orderStatus">
+            Processing your order...
+          </div>
+          <div class="spinner"></div>
+          <div class="order-items" id="orderItems"></div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
